@@ -441,6 +441,16 @@ hr {
   }
 }
 
+.shihtzu{
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  border-left: 1px solid #41b3a3;
+  border-top: 1px solid var #41b3a3;
+  border-radius: 25px;
+  background-color: black;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
 @media (max-width: 720px) {
   .header {
     font-size: 3rem;
@@ -470,14 +480,31 @@ hr {
     width: 300px;
     height: 300px;
   }
+  .shihtzu{
+    size: 200px;
+  }
 }
 
 @media (min-width: 800px) {
+  #Me {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  #intro {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+
+  .shihtzu{
+    grid-column: 7/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
   article {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
   }
-
   #projects img {
     grid-column: 1/6;
     grid-row: 1/2;
