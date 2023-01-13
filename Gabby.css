@@ -127,10 +127,6 @@ body {
    font-size: 8rem;
 }      */
 
-.fullname:hover {
-  color: #5cdb95;
-}
-
 .header {
   font-size: 7rem;
   text-decoration: none;
@@ -398,8 +394,23 @@ nav li:first-child {
 hr {
   margin: 40px 0;
   border: 0;
-  border-top: 5px solid hotpink;
 }
+
+.first{
+  border-top: 5px solid #2ecc40;
+}
+ .second{
+  border-top: 5px solid #05386b;
+ }
+ .third{
+  border-top: 5px solid #ff4136;
+ }
+ .fourth{
+  border-top: 5px solid #ff851b;;
+ }
+ .fifth{
+  border-top: 5px solid hotpink;
+ }
 
 .arrow {
   position: relative;
@@ -410,7 +421,6 @@ hr {
   height: 40px;
   margin-bottom: 1rem;
   color: #05386b;
-
   /**
    * Dark Arrow Down
    */
@@ -497,7 +507,7 @@ hr {
 
   .shihtzu{
     grid-column: 7/11;
-    grid-row: 1/2;
+    grid-row: 1/3;
     order: 2;
     text-align: right;
   }
@@ -515,10 +525,16 @@ hr {
     grid-row: 1/2;
     order: 2;
     text-align: right;
+    padding-right: 2rem;
   }
 
   #projects ul {
     justify-content: flex-end;
   }
 
+}
+@media (min-width: 1200px) {
+ .hidden-div{
+  margin-left: 450px;
+ }
 }
