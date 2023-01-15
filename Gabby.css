@@ -27,7 +27,7 @@ body {
   margin-left: 1rem;
   font-family: var(--sans);
   font-size: var(--font-size);
-  background-color:#464650;
+  background-color: beige;
   padding-top: 3rem;
 }
 
@@ -134,6 +134,7 @@ body {
   text-align: center;
   padding-right: 1rem;
   font-family: 'Pacifico', cursive;
+  padding-right: 200px;
 }
 
 .header-first {
@@ -156,7 +157,7 @@ body {
 
 .fa-solid,
 .fa-brands {
-  color: black;
+color:black;
 }
 
 #heart {
@@ -262,25 +263,25 @@ footer ul {
 }
 
 #nav-icon1 span {
+  position: absolute;
+                top: 10px;
+                left: -25px;
   display: block;
-  margin: 4px;
-  height: 9px;
-  width: 60px;
+  /* margin: 4px; */
+  padding: none;
+  height: 60px;
+  width: 80px;
   background: #b10dc9;
-  border:.5px solid black;
-  border-radius: 9px;
+  border: 4px solid black;
+  border-radius: 30px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #nav-menu1:checked~#nav-icon1 span:nth-child(1) {
-  -webkit-transform: translate(21px, -13px);
-  -moz-transform: rotate(135deg) translate(21px, -13px);
-  -o-transform: rotate(135deg) translate(21px, -13px);
-  transform: translate(5px, 110px);
-  background:#2ecc40;
+width:600px;
 }
 
-#nav-menu1:checked~#nav-icon1 span:nth-child(2) {
+/* #nav-menu1:checked~#nav-icon1 span:nth-child(2) {
   -webkit-transform: translate(21px, -13px);
   -moz-transform: rotate(135deg) translate(21px, -13px);
   -o-transform: rotate(135deg) translate(21px, -13px);
@@ -294,7 +295,7 @@ footer ul {
   -o-transform: rotate(-135deg) translate(3px);
   transform: translate(95px, 84px);
   background:hotpink;
-}
+} */
 
 input[type="checkbox"] {
   display: none;
@@ -328,16 +329,27 @@ nav ul {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-
+  position: absolute;
+  bottom:2px;
+  top: 0;
+  left:-50px;
 }
 
 nav li:first-child {
-  padding-left: 1rem;
+  padding-left: 6rem;
 
 }
 a{
-  color:beige;
+  color:black;
+}  
+  #nav-icon1 span  {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ff851b, yellow, #2ecc40, cyan, #0074d9, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ff851b, yellow, #2ecc40, cyan, #0074d9, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ff851b, yellow,#2ecc40, cyan, #0074d9, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ff851b , yellow, #2ecc40, cyan, #0074d9, red); /* Standard syntax (must be last) */
 }
+
 #intro {
   padding-left: 1rem;
   padding-bottom: 1rem;
@@ -362,7 +374,7 @@ a{
   padding-bottom: 1rem;
   border: 5px solid black;
   border-radius: 30px;
-  background-color: #b10dc9;
+  background-color: beige;
   margin-right: auto;
   margin-left: auto;
   width: 800px;
@@ -396,21 +408,11 @@ hr {
   margin: 40px 0;
   border: 0;
 }
-
-.first{
-  border-top: 5px solid #2ecc40;
-}
- .second{
-  border-top: 5px solid #0074d9;
- }
- .third{
-  border-top: 5px solid #ff4136;
- }
  .fourth{
-  border-top: 5px solid #ff851b;;
+  border-top: 5px solid black;
  }
  .fifth{
-  border-top: 5px solid hotpink;
+  border-top: 5px solid black;
  }
 
 .arrow {
@@ -455,9 +457,15 @@ hr {
 .shihtzu{
   margin: 2rem 0 4rem 0;
   padding: 1rem;
+    border: 4px solid black;
   border-radius: 25px;
   background-color: black;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, red); /* Standard syntax (must be last) */
 }
 
 @media (max-width: 720px) {
