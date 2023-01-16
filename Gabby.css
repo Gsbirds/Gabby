@@ -53,6 +53,7 @@ body {
   margin-left: -10px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   border: 5px solid black;
+  transform: rotate(-4deg);
 }
 
 .hidden-div span:nth-child(1):hover {
@@ -67,6 +68,7 @@ body {
   background: #ff851b;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   border: 5px solid black;
+  transform: rotate(3deg);
 }
 
 .hidden-div span:nth-child(2):hover {
@@ -81,6 +83,7 @@ body {
   background: #2ecc40;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   border: 5px solid black;
+  transform: rotate(-4deg);
 }
 
 .hidden-div span:nth-child(3):hover {
@@ -95,6 +98,7 @@ body {
   background: #0074d9;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   border: 5px solid black;
+  transform: rotate(3deg);
 }
 
 .hidden-div span:nth-child(4):hover {
@@ -109,6 +113,7 @@ body {
   background: #b10dc9;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   border: 5px solid black;
+  transform: rotate(-4deg);
 }
 
 .hidden-div span:nth-child(5):hover {
@@ -228,6 +233,7 @@ color:black;
 }
 
 #projects img {
+  transform: rotate(-4deg);
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   border-left: 1px solid #41b3a3;
@@ -398,22 +404,115 @@ a{
   -webkit-transform: scale(1.3);
   cursor: pointer;
 }
+/* Form ///////////////////////////////////////////// */
+@font-face {
+  font-family: "handwriting";
+  src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "typewriter";
+  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+/* h1 {
+  font: 1em "typewriter", monospace;
+  align-self: end;
+} */
+
+#message {
+  grid-row: 1 / 5;
+}
+
+#from,
+#reply {
+  display: flex;
+}
+
+
+label {
+  font: 0.8em "typewriter", sans-serif;
+}
+
+input,
+textarea {
+  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(0,0,0,0,0);
+  border-radius: 5px;
+}
+
+input{
+  border:1px solid gray;
+  border-radius: 10px;
+}
+
+textarea {
+  display: block;
+
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 90%;
+
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  /* resize  : none; */
+  overflow: auto;
+}
+
+
+button {
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  background: #000;
+  color: #fff;
+}
+
+/* Form ///////////////////////////////////////////// */
 /* .hr1 {
   margin: 40px 0;
   border: 0;
   border-top: 5px solid #ff4136;
 } */
+
 hr {
   margin: 40px 0;
   border: 0;
 }
+
  .fourth{
   border-top: 5px solid black;
  }
  .fifth{
   border-top: 5px solid black;
  }
+
 
 .arrow {
   position: relative;
@@ -455,6 +554,7 @@ hr {
 }
 
 .shihtzu{
+  transform: rotate(4deg);
   margin: 2rem 0 4rem 0;
   padding: 1rem;
     border: 4px solid black;
