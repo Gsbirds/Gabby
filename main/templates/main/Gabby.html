@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Slab:wght@100&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/Gabby.css" %}">
+  <title>Gabby Burgard</title>
+</head>
+
+<body>
+
+  <header>
+    <input type="checkbox" id="nav-menu1">
+    <label id="nav-icon1" for="nav-menu1">
+      <span>      <nav>
+        <ul class="navItems">
+
+          <li> <a href="#projects">Projects</a></li>
+          <li> <a href="#intro">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+          <li><a href="https://www.linkedin.com/in/gabby-burgard-14924abb/"><i
+                class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/Gsbirds"><i
+                class="fa-brands fa-github"></i></a></li>
+          <li><button class="resume" href="https://frontendmasters.com/teachers/jen-kramer/"
+              target="_blank">Resume</button></i></li>
+        </ul>
+      </nav></span>
+      <!-- <span></span>
+      <span></span> -->
+
+<!-- <hr class="first">
+<hr class="second">
+<hr class="third">
+ -->
+
+    </label>
+  </header>
+  <div class="fullname">
+
+    <span class="header-first"> Gabrielle</span>
+
+    <script src="https://kit.fontawesome.com/79acb8bbba.js" crossorigin="anonymous"></script>
+  </div>
+  <span class="hidden-div"><span>G</span><span>a</span><span>b</span><span>b</span><span>y</span></span>
+
+  <span class="header"> Burgard</span>
+
+  <section id="Me">
+  <section id="intro">
+
+    <p class="name">Hi, my name is <span>Gabby</i></span></p>
+
+    <p class="name">I'm an educator specializing in HTML, CSS, user experience, and no-code technologies.</p>
+    <p>Currently, I'm creating courses for <a href="https://frontendmasters.com/teachers/jen-kramer/"
+        target="_blank">Frontend Masters</a>.</p>
+
+    <div class="arrow bounce"></div>
+
+  </section>
+  <img class="shihtzu" src="/home/gabby/Portfolio/bg-shih-tzu-hero-m.jpg"/>
+</section>
+
+  <p> </p>
+  <hr class="fourth">
+  <h2>Projects I've worked on</h2>
+
+  {% for projects in projects %}
+
+  <div class="section-blue">
+    <section id="projects">
+      <article>
+        <div class="text">
+          <h4>{{projects.title}}</h4>
+          <h3></h3>
+          <p class="blackbox">{{projects.description}}</p>
+          <h4>Technologies used include:</h4>
+          <ul>
+            <li>{{projects.languages}}</li>
+          </ul>
+        </div>
+        <img src="{{projects.picture}}"/>
+      </article>
+    </section>
+
+  </div>
+{% endfor %}
+
+
+  <hr class="fifth">
+
+  <section id="contact">
+    <h2>Contact me</h2>
+    <p class="message">I'm always interested in hearing about
+      [state what it is you'd like to get emails and contacted about].</p>
+
+
+  <section>
+        <form action="/my-handling-form-page" method="post">
+          <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+              <label for="mail">Email:</label>
+              <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+              <label for="msg">Message:</label>
+              <textarea id="msg" name="user_message"></textarea>
+            </li>
+          </ul>
+          <button class="form-button" type="submit">Send</button>
+
+        </form>
+
+  </section>
+  </section>
+
+  <footer>
+    <h1>Gabby Burgard <i id="heart" class="fa-solid fa-heart"></i> Web Developer and Artist.</h1>
+
+    <p> <i class="fa-solid fa-copyright"></i> 2022 Gabrielle Burgard. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
