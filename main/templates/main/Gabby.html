@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Slab:wght@100&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/Gabby.css" %}">
+  <title>Gabby Burgard</title>
+</head>
+
+<body>
+
+  <header>
+    <input type="checkbox" id="nav-menu1">
+    <label id="nav-icon1" for="nav-menu1">
+      <span>      <nav>
+        <ul class="navItems">
+
+          <li> <a href="#projects">Projects</a></li>
+          <li> <a href="#intro">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+          <li><a href="https://www.linkedin.com/in/gabby-burgard-14924abb/"><i
+                class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/Gsbirds"><i
+                class="fa-brands fa-github"></i></a></li>
+          <li><button class="resume" href="https://frontendmasters.com/teachers/jen-kramer/"
+              target="_blank">Resume</button></i></li>
+        </ul>
+      </nav></span>
+      <!-- <span></span>
+      <span></span> -->
+
+<!-- <hr class="first">
+<hr class="second">
+<hr class="third">
+ -->
+
+    </label>
+  </header>
+  <div class="fullname">
+
+    <span class="header-first"> Gabrielle</span>
+
+    <script src="https://kit.fontawesome.com/79acb8bbba.js" crossorigin="anonymous"></script>
+  </div>
+  <span class="hidden-div"><span>G</span><span>a</span><span>b</span><span>b</span><span>y</span></span>
+
+  <span class="header"> Burgard</span>
+
+  <section id="Me">
+    <input type="checkbox" id="intro-check">
+    <label id="intro-icon1" for="intro-check">
+  <div id="intro">
+    
+    <p class="name">Hi, my name is <span>Gabby.</i></span></p>
+
+    <p class="name">I'm a philosopher, an artist, and, for the past two years, a blossoming software engineer.
+      I have a huge passion for learning and for free access to education. During my Graduate program in Philosophy, 
+      my focus was mainly on the philosophy of Artificial Intelligence and Cognitive Science. This focus stirred in me a desire
+      to better understand how computers think. After I recieved my Masters degree in Philosophy from the 
+      University of Houston, I decided I wanted a career more oriented toward my love of logic and creating things. Starting over with my education
+      was not an easy decision, but I wanted to learn absolutely everything I could about programming. I went back to school and will
+      recieve my Bachelors in Computer Science in the Fall of 2023. Because I felt I needed an even more robust, hands-on education, I also
+      enrolled in Hack Reactor's 19 week software engineering emmersive. There I really learned what it took to start putting my projects together.
+      Once I knew enough to start creating, I fell in love. Below are some of these projects where I discovered my passion for programming. </p>
+
+
+    </div>
+  
+</section>
+
+  <p> </p>
+  <hr class="fourth">
+  <h2>Projects I've worked on</h2>
+
+  {% for projects in projects %}
+
+  <section class="section-blue">
+    <section id="projects">
+      <article>
+        <div class="text">
+          <h4>{{projects.title}}</h4>
+          <h3></h3>
+          <p class="blackbox">{{projects.description}}</p>
+          <h4>Technologies used include:</h4>
+          <ul>
+            <li>{{projects.languages}}</li>
+          </ul>
+        </div>
+        <div><img class="projects" src="{{projects.picture.url}}"/></div>
+      </article>
+    </section>
+
+  </section>
+{% endfor %}
+
+
+  <hr class="fifth">
+
+  <section id="contact">
+    <h2>Contact me</h2>
+    <p class="message">I'm always interested in hearing about
+      [state what it is you'd like to get emails and contacted about].</p>
+
+
+  <section>
+        <form action="/my-handling-form-page" method="post">
+          <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+              <label for="mail">Email:</label>
+              <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+              <label for="msg">Message:</label>
+              <textarea id="msg" name="user_message"></textarea>
+            </li>
+          </ul>
+          <button class="form-button" type="submit">Send</button>
+
+        </form>
+
+  </section>
+  </section>
+
+  <footer>
+    <h1>Gabby Burgard <i id="heart" class="fa-solid fa-heart"></i> Fullstack Developer and Artist.</h1>
+
+    <p> <i class="fa-solid fa-copyright"></i> 2022 Gabrielle Burgard. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
