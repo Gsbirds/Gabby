@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,11 +13,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-
+  
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Slab:wght@100&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="{% static "css/Gabby.css" %}">
+  <link rel="stylesheet" type="text/css" href="./Gabby.css" />
+  <script type="text/javascript" src="./Gabby.js"></script>
   <title>Gabby Burgard</title>
 </head>
 
@@ -31,13 +30,12 @@
       <span>      <nav>
         <ul class="navItems">
 
-          <li> <a href="#projects">Projects</a></li>
-          <li> <a href="#intro">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-
-          <li><a href="https://www.linkedin.com/in/gabby-burgard-14924abb/"><i
+          <li> <a class="nav1" href="https://frontendmasters.com/teachers/jen-kramer/" target="_blank">Projects</a></li>
+          <li> <a class="nav2" href="https://frontendmasters.com/teachers/jen-kramer/" target="_blank">About</a></li>
+          <li><a class="nav3"  href="https://frontendmasters.com/teachers/jen-kramer/" target="_blank">Contact</a></li>
+          <li><a href="https://frontendmasters.com/teachers/jen-kramer/" target="_blank"><i
                 class="fa-brands fa-linkedin"></i></a></li>
-          <li><a href="https://github.com/Gsbirds"><i
+          <li><a href="https://frontendmasters.com/teachers/jen-kramer/" target="_blank"><i
                 class="fa-brands fa-github"></i></a></li>
           <li><button class="resume" href="https://frontendmasters.com/teachers/jen-kramer/"
               target="_blank">Resume</button></i></li>
@@ -62,29 +60,8 @@
   <span class="hidden-div"><span>G</span><span>a</span><span>b</span><span>b</span><span>y</span></span>
 
   <span class="header"> Burgard</span>
-
-  <section id="Me">
-<<<<<<< HEAD
-    <input type="checkbox" id="intro-check">
-    <label id="intro-icon1" for="intro-check">
-  <div id="intro">
-    
-    <p class="name">Hi, my name is <span>Gabby.</i></span></p>
-
-    <p class="name">I'm a philosopher, an artist, and, for the past two years, a blossoming software engineer.
-      I have a huge passion for learning and for free access to education. During my Graduate program in Philosophy, 
-      my focus was mainly on the philosophy of Artificial Intelligence and Cognitive Science. This focus stirred in me a desire
-      to better understand how computers think. After I recieved my Masters degree in Philosophy from the 
-      University of Houston, I decided I wanted a career more oriented toward my love of logic and creating things. Starting over with my education
-      was not an easy decision, but I wanted to learn absolutely everything I could about programming. I went back to school and will
-      recieve my Bachelors in Computer Science in the Fall of 2023. Because I felt I needed an even more robust, hands-on education, I also
-      enrolled in Hack Reactor's 19 week software engineering emmersive. There I really learned what it took to start putting my projects together.
-      Once I knew enough to start creating, I fell in love. Below are some of these projects where I discovered my passion for programming. </p>
-
-
-    </div>
   
-=======
+  <section id="Me">
   <section id="intro">
 
     <p class="name">Hi, my name is <span>Gabby</i></span></p>
@@ -97,46 +74,36 @@
 
   </section>
   <img class="shihtzu" src="/home/gabby/Portfolio/bg-shih-tzu-hero-m.jpg"/>
->>>>>>> 066419e45c66e5d7bd7bfd7e06c6909b87e86268
 </section>
 
   <p> </p>
+
   <hr class="fourth">
-  <h2>Projects I've worked on</h2>
 
-  {% for projects in projects %}
-
-<<<<<<< HEAD
-  <section class="section-blue">
-=======
   <div class="section-blue">
->>>>>>> 066419e45c66e5d7bd7bfd7e06c6909b87e86268
     <section id="projects">
+      <h2>Projects I've worked on</h2>
       <article>
         <div class="text">
-          <h4>{{projects.title}}</h4>
+          <h4>Latest Project</h4>
           <h3></h3>
-          <p class="blackbox">{{projects.description}}</p>
+          <p class="blackbox">Description of the project. This should be fairly concise while also describing the key
+            components that you developed or worked on. It can be as long as you need it to be but should at least be a
+            few sentences long. Be sure to include specific links anywhere in the description. A link looks like <a
+              href="https://frontendmasters.github.io/grid-flexbox-v2/">this</a>, and multiple links look <a
+              href="#">like this</a> and <a href="#">like this</a>.</p>
           <h4>Technologies used include:</h4>
           <ul>
-            <li>{{projects.languages}}</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SVG</li>
           </ul>
         </div>
-<<<<<<< HEAD
-        <div><img class="projects" src="{{projects.picture.url}}"/></div>
+        <img src="https://assets.codepen.io/296057/fem-gettingstartedcss-ch5-1.png"
+          alt="Screenshot of the Wall of Wonder." />
       </article>
     </section>
-
-  </section>
-=======
-        <img src="{{projects.picture}}"/>
-      </article>
-    </section>
-
   </div>
->>>>>>> 066419e45c66e5d7bd7bfd7e06c6909b87e86268
-{% endfor %}
-
 
   <hr class="fifth">
 
@@ -144,7 +111,7 @@
     <h2>Contact me</h2>
     <p class="message">I'm always interested in hearing about
       [state what it is you'd like to get emails and contacted about].</p>
-
+    
 
   <section>
         <form action="/my-handling-form-page" method="post">
@@ -165,16 +132,12 @@
           <button class="form-button" type="submit">Send</button>
 
         </form>
-
+      
   </section>
   </section>
 
   <footer>
-<<<<<<< HEAD
-    <h1>Gabby Burgard <i id="heart" class="fa-solid fa-heart"></i> Fullstack Developer and Artist.</h1>
-=======
     <h1>Gabby Burgard <i id="heart" class="fa-solid fa-heart"></i> Web Developer and Artist.</h1>
->>>>>>> 066419e45c66e5d7bd7bfd7e06c6909b87e86268
 
     <p> <i class="fa-solid fa-copyright"></i> 2022 Gabrielle Burgard. All Rights Reserved.</p>
   </footer>

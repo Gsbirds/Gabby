@@ -63,7 +63,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+<<<<<<< HEAD
                 'django.template.context_processors.media',
+=======
+>>>>>>> 066419e45c66e5d7bd7bfd7e06c6909b87e86268
             ],
         },
     },
@@ -123,6 +126,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+<<<<<<< HEAD
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+=======
+>>>>>>> 066419e45c66e5d7bd7bfd7e06c6909b87e86268
